@@ -1,0 +1,89 @@
+#stos {
+  p {
+    text-align: left;
+    text-align: justify;
+    @include md {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .stats {
+    color: $color__site-primary;
+    font-size: 0;
+    b {
+      font-size: 15px;
+      display: inline-block;
+      min-width: 255px;
+      @include md {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+    .stats__bar {
+      display: inline-block;
+      width: 230px;
+      margin-left: 10px;
+      span {
+        display: inline-block;
+        padding: 10px;
+        font-size: 13px;
+        background-color: $color__site-secondary;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        text-align: right;
+        &:first-child {
+          background-color: $color__site-primary;
+          border-bottom-left-radius: 20px;
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 0px;
+          border-top-right-radius: 0px;
+          text-align: left;
+        }
+      }
+      @include md {
+        width: 100%;
+      }
+    }
+  }
+  .stats--avg {
+    .stats__bar {
+      span {
+        width: 50%;
+        &:first-child {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .stats--time {
+    .stats__bar {
+      span {
+        width: 30%;
+        &:first-child {
+          width: 52%;
+        }
+      }
+    }
+  }
+  .stats--night {
+    .stats__bar {
+      span {
+        width: 22%;
+        &:first-child {
+          width: 58%;
+        }
+      }
+    }
+  }
+  .stats--back {
+    .stats__bar {
+      span {
+        width: 30%;
+        &:first-child {
+          width: 52%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// Screen size variables
+$screen__xs-min: 400px; // Tiny phones
+$screen__sm-min: 576px; // Small tablets and large smartphones (landscape view)
+$screen__md-min: 768px; // Small tablets (portrait view)
+$screen__lg-min: 992px; // Tablets and small desktops
+$screen__xl-min: 1080px; // Large tablets and desktops
+
+// Mixins
+@mixin xs {
+  @media (max-width: #{$screen__xs-min}) {
+    @content;
+  }
+} // Tiny devices
+@mixin sm {
+  @media (max-width: #{$screen__sm-min}) {
+    @content;
+  }
+} // Small devices
+@mixin md {
+  @media (max-width: #{$screen__md-min}) {
+    @content;
+  }
+} // Medium devices
+@mixin lg {
+  @media (max-width: #{$screen__lg-min}) {
+    @content;
+  }
+} // Large devices
+@mixin xl {
+  @media (max-width: #{$screen__xl-min}) {
+    @content;
+  }
+} // Extra large devices
+
+@mixin customscreen($screen) {
+  @media (max-width: $screen+"px") {
+    @content;
+  }
+}
+
+@mixin customminscreen($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}

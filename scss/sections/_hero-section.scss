@@ -1,0 +1,57 @@
+#hero {
+  background-image: url(../img/hero_bg_desktop.png);
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .one-line {
+    position: relative;
+    max-width: 440px;
+    margin-top: 20px;
+    button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 120px;
+      padding: 15px 15px;
+      background-color: $color__site-secondary;
+      font-weight: bold;
+    }
+    input[type="email"] {
+      padding: 20px;
+      padding-right: 130px;
+      border: 1px solid;
+      border-color: $color__site-secondary;
+    }
+  }
+  .red-gifts {
+    @include md {
+      display: flex !important;
+      margin-top: 50px;
+      img {
+        margin-top: 60px;
+      }
+    }
+  }
+  .red-gifts--col {
+    width: 50%;
+    flex: 0 0 auto;
+    a {
+      span {
+        display: block;
+        font-weight: normal;
+        &:first-child {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  @include md {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-position: revert;
+  }
+}

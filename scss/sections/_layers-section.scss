@@ -1,0 +1,202 @@
+#layers {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .selector {
+    display: table;
+    width: 100%;
+    position: relative;
+    .selector--row {
+      display: table-row;
+      position: relative;
+      .mattress {
+        list-style: none;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-position: center;
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: 5px;
+        position: relative;
+        @include md {
+          background-size: 160% !important;
+          background-position: 90% 60% !important;
+          height: 40px !important;
+          text-align: left;
+          padding-left: 10px;
+        }
+        .mattress__details {
+          box-shadow: 2px 3px 19px 0px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 2px 3px 19px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 2px 3px 19px 0px rgba(0, 0, 0, 0.75);
+          position: absolute;
+          left: 63%;
+          width: 200px;
+          transform: translateX(-50%);
+          background-color: rgba(255, 255, 255, 0.9);
+          top: 2px;
+          border-radius: 10px;
+          padding: 5px 10px;
+          text-align: left;
+          display: none;
+          z-index: 99;
+          p {
+            font-size: 10px;
+          }
+          h5 {
+            margin-bottom: 0px;
+          }
+        }
+        .mattress__details--active {
+          display: block;
+        }
+      }
+      .mattress--cooling {
+        height: 100px;
+        background-image: url("../img/layers/1st.png");
+      }
+      .mattress--comfort {
+        height: 40px;
+        background-image: url("../img/layers/2nd.png");
+        background-position-y: -116px;
+      }
+      .mattress--core {
+        height: 45px;
+        background-image: url("../img/layers/4th.png");
+        background-position-y: -108px;
+      }
+      span {
+        font-size: 14px;
+        display: inline-block;
+        margin-left: 10px;
+        padding: 3px 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: $color__site-primary;
+        font-weight: bold;
+        @include md {
+          font-size: 10px;
+          margin-left: 0px;
+          padding: 6px;
+        }
+      }
+
+      a {
+        background: $color__site-primary--inverse;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        line-height: 100%;
+        color: $color__site-primary;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        font-size: 16px;
+        &:hover {
+          background: $color__site-primary;
+          color: $color__site-primary--inverse;
+        }
+      }
+
+      a:before,
+      a:after {
+        content: "";
+        width: 17px;
+        height: 17px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+      a:after {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  .selector--second {
+    .selector--row {
+      .mattress {
+        @include md {
+          background-position: revert !important;
+          background-position-y: 63% !important;
+          text-align: right;
+        }
+      }
+    }
+  }
+  .pricess {
+    max-width: 270px;
+    margin-bottom: 20px;
+    .pricess__before {
+      font-size: 12px;
+      margin-bottom: 0;
+      span {
+        text-decoration: line-through;
+      }
+    }
+    .pricess__now {
+      color: $color__site-danger--light;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    .pricess__or {
+      position: relative;
+      line-height: 80px;
+      font-size: 12px;
+      &:before,
+      &:after {
+        content: "";
+        width: 1px;
+        height: 25px;
+        background: $color__body-text;
+        position: absolute;
+        top: 0;
+        z-index: 99;
+        left: 50%;
+        @include md {
+          width: 25px;
+          height: 1px;
+          top: 50%;
+          bottom: auto;
+          left: 20%;
+          right: auto;
+        }
+      }
+      &::after {
+        bottom: 0;
+        top: auto;
+        @include md {
+          bottom: auto;
+          top: 50%;
+          right: 20%;
+          left: auto;
+        }
+      }
+      @include md {
+        line-height: 40px;
+      }
+    }
+    @include md {
+      display: block !important;
+    }
+  }
+  @include md {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .col__wrapper {
+    @include md {
+      display: flex;
+    }
+    .col__fifty {
+      width: 50% !important;
+      padding: 0 !important;
+    }
+  }
+}

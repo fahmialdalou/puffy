@@ -1,0 +1,151 @@
+$container__size: 1410px;
+$container__size--medium: 1150px;
+$container__size--small: 1000px;
+$border-radius: 32px;
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.container {
+  max-width: $container__size;
+}
+
+.container--small {
+  max-width: $container__size--small;
+}
+
+.container--medium {
+  max-width: $container__size--medium;
+}
+
+.col__wrapper {
+  display: flex;
+  @include md {
+    display: block;
+  }
+}
+
+.col__twenty-five,
+.col__fifty {
+  flex: 0 0 auto;
+  // padding-left: 15px;
+  // padding-right: 15px;
+}
+
+.col__twenty {
+  width: 20%;
+}
+
+.col__fourty {
+  width: 40%;
+}
+
+.col__thirtythree {
+  width: 33.3333%;
+}
+
+.col__twenty-five {
+  width: 25%;
+}
+
+.col__fifty {
+  width: 50%;
+}
+
+.table {
+  display: table;
+}
+
+.table--cell {
+  display: table-cell;
+}
+
+.borderless {
+  border: 0;
+}
+
+.rounded-corners {
+  border-radius: $border-radius;
+}
+
+.uppertext {
+  text-transform: uppercase;
+}
+
+.space__one-hundred {
+  margin-top: 100px;
+  @include md {
+    margin-top: 50px;
+  }
+}
+
+.btn {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+  min-width: 180px;
+  margin-bottom: 10px;
+  @include md {
+    min-width: 110px;
+  }
+}
+
+.btn--info {
+  background-color: $color__site-info;
+  border: 2px solid;
+  border-color: $color__site-info--light;
+}
+
+.btn--danger {
+  background-color: $color__site-danger--medium;
+  border-radius: 20px;
+  padding: 5px 0;
+  border-bottom: 5px solid;
+  border-color: $color__site-danger;
+  @include md {
+    min-width: 150px;
+  }
+}
+
+.desktop-only {
+  @include md {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  display: none !important;
+  @include md {
+    display: block !important;
+  }
+}
+
+.col__twenty,
+.col__twenty-five,
+.col__thirtythree,
+.col__fourty,
+.col__fifty {
+  @include md {
+    width: 100%;
+    // padding-left: 15px !important;
+    // padding-right: 15px !important;
+  }
+}
